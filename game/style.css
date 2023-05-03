@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gameboard{
+    position: relative; 
+    margin: 0 auto; /* deixa centralizado*/
+
+    width: 100%;
+    height: 500px;
+
+    border-bottom: 30px solid green;
+    overflow: hidden; /* faz tudo que sair da tela desaparecer */
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe{
+    position: absolute; /* faz com que a posição de nenhuma afeta a outra */
+    bottom: 0; /* deixa a imagem na parte de baixo */
+
+    width: 80px;
+
+    /* infinite = repete a animação infinitamente | linear = deixa a animação com velocidade continua */
+    animation: pipeanimation 1.5s infinite linear;
+}
+
+.mario{
+    position: absolute; /* faz com que a posição de nenhuma afeta a outra */
+
+    width: 150px;
+    bottom: 0;
+}
+
+.jump{
+    animation: marioanimation 500ms ease-out;
+}
+.clounds{
+    position: absolute;
+    width: 550px;
+    animation: cloundsanimation 20s infinite linear;
+}
+
+@keyframes pipeanimation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes marioanimation {
+    0% {
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+
+}
+
+@keyframes cloundsanimation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
