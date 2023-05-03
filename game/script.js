@@ -1,6 +1,5 @@
 const mario = document.querySelector("img.mario")
 const pipe = document.querySelector("img.pipe")
-console.log(mario, pipe)
 
 const jump = () =>{ /* muda a classe da imagem para realizar a animação */
 
@@ -13,10 +12,12 @@ const jump = () =>{ /* muda a classe da imagem para realizar a animação */
         500
     )
 }
-const loop = setInterval(
+const loop = setInterval( // cria um loop 
     ()=>{
-        const pipeposition = pipe.offsetLeft
+        
+        const pipeposition = pipe.offsetLeft // puxa o valor da posição do cano
         const marioposition = window.getComputedStyle(mario).bottom.replace("px", "")
+
         if (pipeposition <= 120 && Number(marioposition) < 80 && pipeposition > 0){
             pipe.style.animation = "none"
             pipe.style.left = `${pipeposition}px`
