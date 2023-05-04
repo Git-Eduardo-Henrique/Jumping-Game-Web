@@ -4,14 +4,19 @@
     box-sizing: border-box;
 }
 
-.gameboard{
+/* ----------------------------------- game ------------------------------------- */
+.game{
     position: relative; 
+    
     margin: 0 auto; /* deixa centralizado*/
 
-    width: 100%;
-    height: 500px;
+    width: 90%;
+    height: 50vh;
 
-    border-bottom: 30px solid green;
+    border-radius: 2rem;
+
+    margin-top: 5rem;
+
     overflow: hidden; /* faz tudo que sair da tela desaparecer */
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
@@ -20,7 +25,8 @@
     position: absolute; /* faz com que a posição de nenhuma afeta a outra */
     bottom: 0; /* deixa a imagem na parte de baixo */
 
-    width: 80px;
+    width: 5rem;
+    right: -80px;
 
     /* infinite = repete a animação infinitamente | linear = deixa a animação com velocidade continua */
     animation: pipeanimation 1.5s infinite linear;
@@ -29,19 +35,22 @@
 .mario{
     position: absolute; /* faz com que a posição de nenhuma afeta a outra */
 
-    width: 150px;
+    z-index: 1;
+    width: 10%;
     bottom: 0;
 }
 
-.jump{
+.mario-jump{
     animation: marioanimation 500ms ease-out;
 }
+
 .clounds{
     position: absolute;
     width: 550px;
     animation: cloundsanimation 20s infinite linear;
 }
 
+/* -------------------------------------- game animation -------------------------------- */
 @keyframes pipeanimation {
     from {
         right: -80px;
@@ -69,6 +78,16 @@
     }
 
 }
+
+@keyframes mariodeath{
+    0% {
+      transform: rotate(0deg) translateY(0);
+    }
+    100% {
+      transform: rotate(360deg) translateY(25rem);
+    }
+ 
+  }
 
 @keyframes cloundsanimation {
     from {
