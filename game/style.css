@@ -6,6 +6,9 @@
     box-sizing: border-box;
 }
 
+body{
+    background: #0a0120;
+}
 /* ----------------------------------- game ------------------------------------- */
 .game{
     position: relative; 
@@ -20,7 +23,9 @@
     margin-top: 5rem;
 
     overflow: hidden; /* faz tudo que sair da tela desaparecer */
+
     background: linear-gradient(#87CEEB, #E0F6FF);
+    box-shadow: 4px 4px 14px black;
 }
 
 .pipe{
@@ -49,7 +54,7 @@
 .clounds{
     position: absolute;
     width: 500px;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     animation: cloundsanimation 15s infinite linear;
 }
 
@@ -65,6 +70,20 @@
 
     color: #fff;
     text-shadow: -3px 0px black; /* coloca sombras em textos */
+}
+
+.hipoints{
+    position: absolute;
+    right: 0;
+    margin-top: 1rem;
+    margin-right: 17rem;
+
+    z-index: 1;
+
+    font-family: 'Press Start 2P', cursive;
+
+    color: #636363;
+    text-shadow: -3px 0px #cecdcd; /* coloca sombras em textos */ 
 }
 /* -------------------------------------- game animation -------------------------------- */
 @keyframes pipeanimation {
