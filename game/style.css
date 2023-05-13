@@ -39,11 +39,11 @@ body{
     animation: pipeanimation 1.5s infinite linear;
 }
 
-.mario{
+.player{
     position: absolute; /* faz com que a posição de nenhuma afeta a outra */
 
     z-index: 1;
-    width: 10%;
+    width: 5rem;
     bottom: 0;
 }
 
@@ -58,33 +58,28 @@ body{
     animation: cloundsanimation 15s infinite linear;
 }
 
-.points{
+.points, .hipoints{
     position: absolute;
     right: 0;
     margin-top: 1rem;
-    margin-right: 2rem;
 
     z-index: 1;
 
     font-family: 'Press Start 2P', cursive;
 
-    color: #fff;
     text-shadow: -3px 0px black; /* coloca sombras em textos */
 }
 
-.hipoints{
-    position: absolute;
-    right: 0;
-    margin-top: 1rem;
-    margin-right: 17rem;
-
-    z-index: 1;
-
-    font-family: 'Press Start 2P', cursive;
-
-    color: #636363;
-    text-shadow: -3px 0px #cecdcd; /* coloca sombras em textos */ 
+.points{
+    margin-right: 2rem;
+    color: #fff;
 }
+
+.hipoints{
+    margin-right: 17rem;
+    color: #636363;
+}
+
 /* -------------------------------------- game animation -------------------------------- */
 @keyframes pipeanimation {
     from {
